@@ -16,15 +16,19 @@ Repo for the solutions to Assignments 1 &amp; 2: Dice Rolling Simulator and Gues
 #### `main` function
 - contains a `while` loop that:
     - generates a random number
-    - asks the user to guess the number (`guess_number` function)
+    - then, while the guess is not correct:
+        - asks the user to guess the number (`guess_number_between` function)
+        - checks the guess (`check_guess` function)
     - when the user has guessed correctly, it asks if they want to play again (`play_again` function)
 
-#### `guess_number` function
-- inside a `while` loop:
-    - asks the user to guess the number
-    - checks the format of the number
-    - checks whether the number is higher or lower than the generated number and gives feedback
-    - if the answer is correct, break out of the loop
+#### `guess_number_between` function
+- asks the user to guess the number
+- checks the format of the number is correct
+- returns the number as `int`
+
+#### `check_guess` function
+- checks whether the number is higher or lower than the generated number and gives feedback
+- if the answer is correct, return `True`. Otherwise, return `False`
 
 #### `play_again` function
 - asks the user if they want to play again
