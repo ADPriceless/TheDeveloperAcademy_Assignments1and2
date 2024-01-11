@@ -2,9 +2,12 @@ import random
 
 
 def main():
+    # range of dice rolls
     MIN_NUMBER = 1
     MAX_NUMBER = 6
 
+    # main loop: ask the user if they want to roll the dice,
+    # break out of loop if answer is 'no'
     while True:
         answer = input('Do you want to roll the dice? (y/n): ').lower()
         if answer in ('n', 'no'):
