@@ -32,10 +32,10 @@ def play_again() -> bool:
     """Ask the user to play again, enforcing format of response.
     Return `True` if 'yes', `False` if 'no'."""
     while True:
-        play_again = input('Play again? (y/n): ')
-        if play_again.lower() in ('y', 'yes'):
+        play_again = input('Play again? (y/n): ').lower()
+        if play_again in ('y', 'yes'):
             return True
-        elif play_again.lower() in ('n', 'no'):
+        elif play_again in ('n', 'no'):
             return False
         else:
             print('Cannot understand answer')
@@ -62,7 +62,7 @@ def main():
         if playing:
             # reset `guess_is_correct` for the next game
             guess_is_correct = False
-
+    print('Goodbye!')
 
 if __name__ == '__main__':
     main()
